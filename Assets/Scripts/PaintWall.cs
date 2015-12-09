@@ -7,9 +7,11 @@ public class PaintWall : MonoBehaviour {
 
 	public GameObject ChooseColor2;
 	public Camera CameraGame;
+	bool clicou = false;
 
 	void OnMouseDown()
 	{
+		clicou = true;
         if (this.gameObject.name == "Brush")
         {
             ChooseColor2.SetActive(true);
@@ -34,4 +36,12 @@ public class PaintWall : MonoBehaviour {
 			CameraGame.backgroundColor = Color.magenta;
 		}
 	}
+	void Update ()
+	{
+		if (clicou) 
+		{
+			//GameObject.Find("Brush").SetActive = false;
+		}
+	}
+
 }
